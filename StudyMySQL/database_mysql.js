@@ -39,8 +39,19 @@ conn.connect();
 // });
 
 
-var sql = 'UPDATE topic SET title=?, author=? WHERE id=?';
-var params = ['NPM', 'SONG', '2'];
+// var sql = 'UPDATE topic SET title=?, author=? WHERE id=?';
+// var params = ['NPM', 'SONG', '2'];
+//
+// conn.query(sql, params, function (err, rows, fields){
+//     if (err) {
+//         console.log(err);
+//         return;
+//     }
+//     console.log(rows);
+// });
+
+var sql = 'DELETE FROM topic WHERE id=?';
+var params = [1];
 
 conn.query(sql, params, function (err, rows, fields){
     if (err) {
