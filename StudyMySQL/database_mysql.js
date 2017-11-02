@@ -26,17 +26,28 @@ conn.connect();
 //     }
 // });
 //
-// conn.end();
 
-var sql = 'INSERT INTO topic (title, description, author) VALUES(?, ?, ?)';
-var params = ['Supervisor', 'Watcher', 'graphittie'];
+// var sql = 'INSERT INTO topic (title, description, author) VALUES(?, ?, ?)';
+// var params = ['Supervisor', 'Watcher', 'graphittie'];
+//
+// conn.query(sql, params, function (err, rows, fields){
+//     if (err) {
+//         console.log(err);
+//         return;
+//     }
+//     console.log(rows.insertId);
+// });
+
+
+var sql = 'UPDATE topic SET title=?, author=? WHERE id=?';
+var params = ['NPM', 'SONG', '2'];
 
 conn.query(sql, params, function (err, rows, fields){
     if (err) {
         console.log(err);
         return;
     }
-    console.log(rows.insertId);
+    console.log(rows);
 });
 
 conn.end();
