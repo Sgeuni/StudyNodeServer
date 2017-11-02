@@ -9,3 +9,7 @@ get('topic/:id/edit') :edit.jade
 get('topic/:id/delete') : delete.jade
     post('topic/:id/delete')
     get('topic/')
+
+
+
+cherry pick test01
