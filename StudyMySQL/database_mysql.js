@@ -15,15 +15,27 @@ conn.connect();
 //
 // connection.end();
 
-var sql = 'SELECT * FROM topic';
+// var sql = 'SELECT * FROM topic';
+//
+// conn.query(sql, function (err, rows, fields){
+//     if (err) {
+//         console.log(err);
+//     } else {
+//         console.log('rows', rows);
+//         console.log('fields', fields);
+//     }
+// });
+//
+// conn.end();
+
+var sql = 'INSERT INTO topic (title, description, author) VALUES("Nodejs", "Server side javascript", "geuni")';
 
 conn.query(sql, function (err, rows, fields){
     if (err) {
         console.log(err);
-    } else {
-        console.log('rows', rows);
-        console.log('fields', fields);
+        return;
     }
+    console.log('rows', rows);
 });
 
 conn.end();
