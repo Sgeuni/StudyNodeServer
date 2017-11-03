@@ -8,6 +8,17 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 
+var mysql      = require('mysql');
+var conn = mysql.createConnection({
+    host     : 'localhost',
+    user     : 'root',
+    password : 'rntfjr',
+    database : 'geunidb'
+});
+
+conn.connect();
+
+
 var app = express();
 
 // view engine setup
